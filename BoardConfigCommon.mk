@@ -40,8 +40,9 @@ FLOOP_NEST_OPTIMIZE := true
 USE_PIPE := false
 
 # kernel stuff
-TARGET_KERNEL_SOURCE := kernel/mediatek/sprout
-TARGET_KERNEL_CONFIG := cyanogenmod_sprout_defconfig
+PRODUCT_COPY_FILES := $(LOCAL_PATH)/kernel:kernel
+#TARGET_KERNEL_SOURCE := kernel/mediatek/sprout
+#TARGET_KERNEL_CONFIG := cyanogenmod_sprout_defconfig
 BOARD_KERNEL_CMDLINE :=
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x00000100
 BOARD_KERNEL_BASE := 0x80000000
